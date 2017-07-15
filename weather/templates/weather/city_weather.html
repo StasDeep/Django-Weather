@@ -5,7 +5,13 @@
     <title>City Weather</title>
 </head>
 <body>
-    <h2>Response:</h2>
-    <code>{{ city_weather }}</code>
+    <h2>Weather in {{ city_weather.city_name }} ({{ city_weather.country_code }})</h2>
+    <img src="{{ city_weather.icon_url }}">
+    <p>Weather: {{ city_weather.weather }}</p>
+    <p>Description: {{ city_weather.weather_description }}</p>
+    <p>Temperature: {{ city_weather.temperature }} °C</p>
+    <p>Humidity: {{ city_weather.humidity }}%</p>
+    <p>Pressure: {{ city_weather.pressure }} hPa</p>
+    <p>Wind speed: {{ city_weather.wind_speed }} meter/sec</p>
 </body>
 </html>
