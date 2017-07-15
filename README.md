@@ -13,7 +13,7 @@ Initialize Country table:
 $ python manage.py loaddata countries
 ```
 
-Initialize City table (takes some time, as there are ~210.000 records):
+Initialize City table (takes 2-3 minutes, as there are ~210.000 records):
 ```
 $ python manage.py loaddata cities
 ```
