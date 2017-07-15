@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QWeather - Search</title>
+</head>
+<body>
+    <h1>QWeather</h1>
+    {% include 'weather/searchform.html' %}
+    {% for city in city_list %}
+        <p><a href="{% url 'weather:city_weather' city.id %}">{{ city.name }}</a></p>
+    {% empty %}
+        <p>No cities found</p>
+    {% endfor %}
+</body>
+</html>

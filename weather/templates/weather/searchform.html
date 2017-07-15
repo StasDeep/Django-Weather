@@ -1,0 +1,4 @@
+<form id="searchform" action="{% url 'weather:search_results' %}" method="get">
+    <input id="searchbox" name="q" type="text" placeholder="Search cities" value="{{ q|default:'' }}">
+    <input type="submit" value="Search">
+</form>
