@@ -19,9 +19,9 @@ def weather_by_city_id(city_id):
               - weather (str),
               - weather_description (str),
               - temperature (float),
-              - humidity (int),
-              - pressure (int),
-              - wind_speed (int),
+              - humidity (float),
+              - pressure (float),
+              - wind_speed (float),
               - icon_url (str)
             
     """
@@ -36,9 +36,9 @@ def weather_by_city_id(city_id):
     city_weather['weather'] = data['weather'][0]['main']
     city_weather['weather_description'] = data['weather'][0]['description']
     city_weather['temperature'] = data['main']['temp'] - 273.15
-    city_weather['humidity'] = data['main']['humidity']
-    city_weather['pressure'] = data['main']['pressure']
-    city_weather['wind_speed'] = data['wind']['speed']
+    city_weather['humidity'] = float(data['main']['humidity'])
+    city_weather['pressure'] = float(data['main']['pressure'])
+    city_weather['wind_speed'] = float(data['wind']['speed'])
     city_weather['icon_url'] = 'http://openweathermap.org/img/w/{}.png'.format(data['weather'][0]['icon'])
 
     return city_weather
