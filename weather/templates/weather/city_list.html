@@ -4,7 +4,7 @@
 
 {% block content %}
     {% for city in city_list %}
-        <p><a href="{% url 'weather:city_weather' city.id %}">{{ city.name }}</a></p>
+        <p><a class="city-block" href="{% url 'weather:city_weather' city.id %}">{{ city.name }}</a></p>
     {% empty %}
         <p>No cities found</p>
     {% endfor %}

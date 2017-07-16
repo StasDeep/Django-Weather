@@ -1,3 +1,52 @@
+body {
+    background-color: #080808;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div {
+    color: #d9d9d9;
+}
+
 main {
     margin-top: 25px;
+}
+
+a.city-block {
+    display: block;
+    height: 45px;
+    padding: 12px;
+    background-color: #0d0d0d;
+    border: #191919 solid 1px;
+    border-radius: 4px;
+    color: #d3d3d3;
+}
+
+a.city-block:hover {
+    text-decoration: none;
+    background-color: #191919;
+}
+
+input.form-control {
+    background-color: #1a1a1a;
+    border: #2f2f2f solid 1px;
+    color: #c5c5c5;
+}
+
+.input-group-btn button {
+    background-color: #0f0f0f;
+    border: #2f2f2f solid 1px;
+    color: #c5c5c5;
+}
+
+.input-group-btn button:hover {
+    background-color: #1a1a1a;
+    border: #2f2f2f solid 1px;
+    color: #c5c5c5;
+}
+
+.progress {
+    background-color: #1a1a1a;
+}
+
+.progress-bar {
+    background-color: #222222;
 }
