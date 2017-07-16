@@ -4,7 +4,14 @@
 {% block title %}{{ city_weather.city_name }}{% endblock %}
 
 {% block content %}
-    {% include 'weather/city_weather_partial.html' %}
+    <div id="weather">
+        {% include 'weather/city_weather_partial.html' %}
+    </div>
+
+    <p>Refresh in:</p>
+    <div class="progress">
+        <div id="progress-bar" class="progress-bar progress-bar-striped active" style="width:100%"></div>
+    </div>
 
     <input type="hidden" id="url_variable" value="{% url 'weather:city_weather' city_id  %}">
 {% endblock %}

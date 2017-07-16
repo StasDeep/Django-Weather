@@ -32,7 +32,8 @@ class CityWeatherView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         if request.is_ajax():
-            self.kwargs['city_id'] = City.objects.order_by('?').first().id
+            # # Get random city.
+            # self.kwargs['city_id'] = City.objects.order_by('?').first().id
             return render(request, self.partial_template_name, self.get_context_data(**kwargs))
         return super(CityWeatherView, self).get(request, *args, **kwargs)
 
