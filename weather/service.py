@@ -26,6 +26,7 @@ def weather_by_city_id(city_id):
               - humidity (int),
               - pressure (int),
               - wind_speed (int),
+              - wind_direction (str),
               - icon_url (str)
             
     """
@@ -43,6 +44,43 @@ def weather_by_city_id(city_id):
     city_weather['humidity'] = int(round(data['main']['humidity']))
     city_weather['pressure'] = int(round(data['main']['pressure']))
     city_weather['wind_speed'] = int(round(data['wind']['speed']))
+
+    if 'deg' in data['wind']:
+        city_weather['wind_direction'] = get_wind_direction(data['wind']['deg'])
+    else:
+        city_weather['wind_direction'] = 'N/A'
+
     city_weather['icon_url'] = static('weather/images/icons/{}.png'.format(data['weather'][0]['icon']))
 
     return city_weather
+
+
+def get_wind_direction(degree):
+    """Convert wind degree to direction.
+    
+    Args:
+        degree (float): degree of the wind.
+         
+    Returns:
+        str: direction of the wind (N, NNE, NE, etc).
+    """
+    DEGREES = [-11.25, 11.25, 33.75, 56.25,
+               78.75, 101.25, 123.75, 146.25,
+               168.75, 191.25, 213.75, 236.25,
+               258.75, 281.25, 303.75, 326.25, 348.75]
+
+    DIRECTIONS = ['N', 'NNE', 'NE', 'ENE',
+                  'E', 'ESE', 'SE', 'SSE',
+                  'S', 'SSW', 'SW', 'WSW',
+                  'W', 'WNW', 'NW', 'NNW']
+
+    # Correction for North wind.
+    if degree > 348.75:
+        degree -= 360
+
+    for i in range(len(DIRECTIONS)):
+        left_border = DEGREES[i]
+        right_border = DEGREES[i + 1]
+
+        if left_border < degree <= right_border:
+            return DIRECTIONS[i]
