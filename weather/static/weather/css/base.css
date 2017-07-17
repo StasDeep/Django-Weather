@@ -1,3 +1,23 @@
+/* Font declaration */
+
+@font-face {
+    font-family: Proxima;
+    src: url('fonts/Proxima_Nova_Regular.otf');
+}
+
+@font-face {
+    font-family: Proxima;
+    font-weight: bold;
+    src: url('fonts/Proxima_Nova_Semibold.otf');
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, input {
+    font-family: Proxima, serif;
+}
+
+
+/* Basic styles */
+
 body {
     background-color: #080808;
 }
