@@ -15,7 +15,13 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <header>
-                    <h1>QWeather</h1>
+                    <a href="{% url 'weather:home' %}">
+                        <img id="logo-header"
+                             class="img-responsive"
+                             src="{% static 'weather/images/logo.png' %}"
+                             onmouseover="this.src='{% static 'weather/images/logo-glow.png' %}'"
+                             onmouseout="this.src='{% static 'weather/images/logo.png' %}'">
+                    </a>
                     {% include 'weather/searchform.html' %}
                 </header>
                 <main id="content">
