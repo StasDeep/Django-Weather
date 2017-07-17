@@ -23,7 +23,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, span, div {
-    color: #d9d9d9;
+    color: #ececec;
 }
 
 main {
@@ -41,6 +41,7 @@ input.form-control {
     background-color: #1a1a1a;
     border: #2f2f2f solid 1px;
     color: #c5c5c5;
+    font-size: 12pt;
 }
 
 input.form-control:focus {

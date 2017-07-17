@@ -1,7 +1,48 @@
+h2 {
+    font-weight: bold;
+    font-size: 23pt;
+}
+
+#weather {
+    margin-bottom: 20px;
+}
+
+#weather-info p {
+    margin: 0;
+}
+
+.weather-icon {
+    width: 110px;
+}
+
+#temperature {
+    font-weight: bold;
+    font-size: 38pt;
+    line-height: 38pt;
+}
+
+#weather-title {
+    font-size: 23pt;
+    line-height: 23pt;
+}
+
+.weather-descr {
+    font-size: 13pt;
+    line-height: 17pt;
+    color: #a8a8a8;
+}
+
+#refresh-in {
+    font-size: 22pt;
+    color: #a8a8a8;
+}
+
 .progress {
     background-color: #1a1a1a;
 }
 
 .progress-bar {
     background-color: #222222;
+    font-size: 10pt;
+    color: #d5d5d5;
 }

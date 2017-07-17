@@ -2,6 +2,8 @@
 import json
 import urllib2
 
+from django.templatetags.static import static
+
 from weather.models import Country
 
 WEATHER_API_KEY = '7ec667bf669cce3a71b5381e2fcdbf75'
@@ -41,6 +43,6 @@ def weather_by_city_id(city_id):
     city_weather['humidity'] = int(round(data['main']['humidity']))
     city_weather['pressure'] = int(round(data['main']['pressure']))
     city_weather['wind_speed'] = int(round(data['wind']['speed']))
-    city_weather['icon_url'] = 'http://openweathermap.org/img/w/{}.png'.format(data['weather'][0]['icon'])
+    city_weather['icon_url'] = static('weather/images/icons/{}.png'.format(data['weather'][0]['icon']))
 
     return city_weather

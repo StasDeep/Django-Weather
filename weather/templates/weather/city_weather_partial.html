@@ -1,8 +1,14 @@
-<h2>Weather in {{ city_weather.city_name }} ({{ city_weather.country_name }})</h2>
-<img src="{{ city_weather.icon_url }}">
-<p>Weather: {{ city_weather.weather }}</p>
-<p>Description: {{ city_weather.weather_description }}</p>
-<p>Temperature: {{ city_weather.temperature }} °C</p>
-<p>Humidity: {{ city_weather.humidity }}%</p>
-<p>Pressure: {{ city_weather.pressure }} hPa</p>
-<p>Wind speed: {{ city_weather.wind_speed }} meter/sec</p>
+<h2>{{ city_weather.city_name }} ({{ city_weather.country_name }})</h2>
+<div class="media">
+    <div class="media-left">
+        <img src="{{ city_weather.icon_url }}" class="media-object weather-icon">
+    </div>
+    <div id="weather-info" class="media-right">
+        <p id="temperature">{{ city_weather.temperature }} °C</p>
+        <p id="weather-title">{{ city_weather.weather }}</p>
+        <p class="weather-descr">{{ city_weather.weather_description }}</p>
+        <p class="weather-descr">humidity: {{ city_weather.humidity }}%</p>
+        <p class="weather-descr">pressure: {{ city_weather.pressure }} hPa</p>
+        <p class="weather-descr">wind: {{ city_weather.wind_speed }} m/s</p>
+    </div>
+</div>
