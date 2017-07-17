@@ -12,3 +12,35 @@ a.city-block:hover {
     text-decoration: none;
     background-color: #191919;
 }
+
+#paginator {
+    text-align: center;
+}
+
+.pagination > li > a {
+    background-color: #121212;
+    color: #d0d0d0;
+    border-color: #202020;
+}
+
+.pagination > li > a:hover {
+    background-color: #262626;
+    color: #d0d0d0;
+    border-color: #202020;
+}
+
+.pagination > li.active > span {
+    background-color: #323232;
+    color: #efefef;
+    border-color: #202020;
+}
+
+.pagination > li.active > span:hover {
+    background-color: #323232;
+    color: #efefef;
+    border-color: #202020;
+}
+
+.pagination > li > a.disabled {
+    padding: 5px;
+}
