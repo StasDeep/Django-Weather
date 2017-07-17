@@ -31,6 +31,11 @@ input.form-control {
     color: #c5c5c5;
 }
 
+input.form-control:focus {
+    border-color: #626262;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(197, 197, 197, 0.6);
+}
+
 .input-group-btn button {
     background-color: #0f0f0f;
     border: #2f2f2f solid 1px;
