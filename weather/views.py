@@ -31,7 +31,7 @@ class CitySearchListView(ListView):
         city_name = self.request.GET.get('q')
         return self.model.objects.filter(name__istartswith=city_name)\
                                  .extra(select={'length': 'length(name)'})\
-                                 .order_by('length')
+                                 .order_by('length', 'country_id')
 
     def get_context_data(self, **kwargs):
         context = super(CitySearchListView, self).get_context_data(**kwargs)
