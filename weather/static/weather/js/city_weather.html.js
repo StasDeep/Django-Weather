@@ -7,7 +7,7 @@ $(function () {
     function refreshProgressBar(reset) {
         if (reset) {
             progress_bar_value = timeout_sec;
-        } else {
+        } else if (progress_bar_value > 0) {
             progress_bar_value -= 1;
         }
 
