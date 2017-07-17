@@ -2,6 +2,8 @@
 import json
 import urllib2
 
+from weather.models import Country
+
 WEATHER_API_KEY = '7ec667bf669cce3a71b5381e2fcdbf75'
 
 
@@ -32,7 +34,7 @@ def weather_by_city_id(city_id):
 
     city_weather = dict()
     city_weather['city_name'] = data['name']
-    city_weather['country_code'] = data['sys']['country']
+    city_weather['country_name'] = Country.objects.get(code=data['sys']['country']).name
     city_weather['weather'] = data['weather'][0]['main']
     city_weather['weather_description'] = data['weather'][0]['description']
     city_weather['temperature'] = int(round(data['main']['temp'] - 273.15))
