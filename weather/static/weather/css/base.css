@@ -14,6 +14,9 @@ main {
     cursor: pointer;
 }
 
+
+/* Search input */
+
 input.form-control {
     background-color: #1a1a1a;
     border: #2f2f2f solid 1px;
@@ -35,12 +38,4 @@ input.form-control:focus {
     background-color: #1a1a1a;
     border: #2f2f2f solid 1px;
     color: #c5c5c5;
-}
-
-.progress {
-    background-color: #1a1a1a;
-}
-
-.progress-bar {
-    background-color: #222222;
 }

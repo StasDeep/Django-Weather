@@ -3,6 +3,8 @@
 
 {% block title %}{{ city_weather.city_name }}{% endblock %}
 
+{% block styles %}<link rel="stylesheet" href="{% static 'weather/css/city_weather.css' %}" />{% endblock %}
+
 {% block content %}
     <div id="weather">
         {% include 'weather/city_weather_partial.html' %}
