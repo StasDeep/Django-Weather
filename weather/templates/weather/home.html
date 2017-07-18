@@ -1,3 +1,37 @@
 {% extends 'weather/base.html' %}
 
+{% load static %}
+
 {% block title %}Main Page{% endblock %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'weather/css/home.css' %}" />{% endblock %}
+
+{% block content %}
+    <div class="media">
+        <div class="media-left">
+            <h2 class="contact-me">Contact me:</h2>
+        </div>
+        <div class="media-right">
+            <a href="https://github.com/StasDeep" class="contact-link">
+                <span class="contact-icon github-img"></span>
+                <span class="contact-text">StasDeep</span>
+            </a>
+            <a href="https://bitbucket.org/StasDeep" class="contact-link">
+                <span class="contact-icon bitbucket-img"></span>
+                <span class="contact-text">StasDeep</span>
+            </a>
+            <a href="https://vk.com/stasdeep" class="contact-link">
+                <span class="contact-icon vk-img"></span>
+                <span class="contact-text">Stas Deep</span>
+            </a>
+            <a href="https://linkedin.com/in/stasdeep/" class="contact-link">
+                <span class="contact-icon linkedin-img"></span>
+                <span class="contact-text">Stas Glubokiy</span>
+            </a>
+            <a href="mailto:glubokiy.stas@gmail.com" class="contact-link">
+                <span class="contact-icon email-img"></span>
+                <span class="contact-text">glubokiy.stas@gmail.com</span>
+            </a>
+        </div>
+    </div>
+{% endblock %}

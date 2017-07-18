@@ -1,0 +1,77 @@
+.contact-me {
+    margin-top: 0;
+}
+
+.contact-link {
+    font-size: 19pt;
+    display: block;
+    height: 34px;
+    margin-bottom: 30px;
+    width: 350px;
+}
+
+.contact-link span {
+    display: inline-block;
+}
+
+.contact-link:hover {
+    text-decoration: none;
+}
+
+.contact-text {
+    text-decoration: underline;
+    position: relative;
+    top: -7px;
+    left: 5px;
+}
+
+.contact-link:hover .contact-text {
+    color: #ffe800;
+}
+
+.contact-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+}
+
+.github-img {
+    background-image: url('../images/contact-icons/icon-github-white.png');
+}
+
+.contact-link:hover .github-img {
+    background-image: url('../images/contact-icons/icon-github-yellow.png');
+}
+
+.bitbucket-img {
+    background-image: url('../images/contact-icons/icon-bitbucket-white.png');
+}
+
+.contact-link:hover .bitbucket-img {
+    background-image: url('../images/contact-icons/icon-bitbucket-yellow.png');
+}
+
+.vk-img {
+    background-image: url('../images/contact-icons/icon-vk-white.png');
+}
+
+.contact-link:hover .vk-img {
+    background-image: url('../images/contact-icons/icon-vk-yellow.png');
+}
+
+.linkedin-img {
+    background-image: url('../images/contact-icons/icon-linkedin-white.png');
+}
+
+.contact-link:hover .linkedin-img {
+    background-image: url('../images/contact-icons/icon-linkedin-yellow.png');
+}
+
+.email-img {
+    background-image: url('../images/contact-icons/icon-email-white.png');
+}
+
+.contact-link:hover .email-img {
+    background-image: url('../images/contact-icons/icon-email-yellow.png');
+}
+
