@@ -3,6 +3,20 @@ Django training project to show current weather in the city.
 
 ## Installation
 
+Create `config.py` that looks like this:
+```python
+# -*- coding: utf-8 -*-
+WEATHER_API_KEY = 'your_api_key'
+```
+
+Replace `your_api_key` with your [OpenWeatherMap](https://openweathermap.org/api) API key.
+You need to sign up to get the key.
+
+Move `config.py` to `weather` Django app:
+```
+$ mv config.py /path/to/project/weather/config.py
+```
+
 Install dependencies:
 ```
 $ pip install -r requirements.txt
