@@ -7,17 +7,25 @@
 
 {% block content %}
     <div id="weather">
-        {% include 'weather/city_weather_partial.html' %}
+        {% if city_weather.error %}
+            <h2>Cannot get weather (HTTP Error)</h2>
+        {% else %}
+            {% include 'weather/city_weather_partial.html' %}
+        {% endif %}
     </div>
 
-    <p id="refresh-in">Refresh in:</p>
-    <div class="progress">
-        <div id="progress-bar" class="progress-bar progress-bar-striped active" style="width:100%"></div>
-    </div>
+    {% if not city_weather.error %}
+        <p id="refresh-in">Refresh in:</p>
+        <div class="progress">
+            <div id="progress-bar" class="progress-bar progress-bar-striped active" style="width:100%"></div>
+        </div>
 
-    <input type="hidden" id="url_variable" value="{% url 'weather:city_weather' city_id  %}">
+        <input type="hidden" id="url_variable" value="{% url 'weather:city_weather' city_id  %}">
+    {% endif %}
 {% endblock %}
 
-{% block scripts %}
-    <script src="{% static 'weather/js/city_weather.html.js' %}"></script>
-{% endblock %}
+{% if not city_weather.error %}
+    {% block scripts %}
+        <script src="{% static 'weather/js/city_weather.html.js' %}"></script>
+    {% endblock %}
+{% endif %}

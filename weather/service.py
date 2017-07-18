@@ -31,10 +31,14 @@ def weather_by_city_id(city_id):
     """
     url_template = 'http://api.openweathermap.org/data/2.5/weather?id={}&appid={}'
     url = url_template.format(city_id, WEATHER_API_KEY)
-    response = urllib2.urlopen(url).read()
+    try:
+        response = urllib2.urlopen(url).read()
+    except urllib2.HTTPError:
+        return dict(error=True)
+
     data = json.loads(response)
 
-    city_weather = dict()
+    city_weather = dict(error=False)
     city_weather['city_name'] = data['name']
     city_weather['country_name'] = Country.objects.get(code=data['sys']['country']).name
     city_weather['weather'] = data['weather'][0]['main']
