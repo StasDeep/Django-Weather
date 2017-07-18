@@ -58,5 +58,18 @@ input.form-control:focus {
 .input-group-btn button:hover {
     background-color: #1a1a1a;
     border: #2f2f2f solid 1px;
-    color: #c5c5c5;
+    color: #ffe800;
 }
+
+.input-group-btn button.btn.btn-default:active {
+    background-color: #292929;
+    border: #2f2f2f solid 1px;
+    color: #ffe800;
+}
+
+.input-group-btn button:focus {
+    background-color: #292929;
+    border: #2f2f2f solid 1px;
+    color: #ffe800;
+}
+

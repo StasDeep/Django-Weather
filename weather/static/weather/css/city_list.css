@@ -11,6 +11,7 @@ a.city-block {
 a.city-block:hover {
     text-decoration: none;
     background-color: #191919;
+    color: #ffe800;
 }
 
 #paginator {
@@ -25,7 +26,7 @@ a.city-block:hover {
 
 .pagination > li > a:hover {
     background-color: #262626;
-    color: #d0d0d0;
+    color: #ffe800;
     border-color: #202020;
 }
 
