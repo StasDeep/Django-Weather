@@ -105,3 +105,6 @@ ENV/
 
 # SQLite3
 *.sqlite3
+
+# Sensitive data
+config.py

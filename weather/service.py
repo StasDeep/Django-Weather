@@ -5,8 +5,7 @@ import urllib2
 from django.templatetags.static import static
 
 from weather.models import Country
-
-WEATHER_API_KEY = '7ec667bf669cce3a71b5381e2fcdbf75'
+from weather.config import WEATHER_API_KEY
 
 
 def weather_by_city_id(city_id):
