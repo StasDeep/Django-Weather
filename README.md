@@ -5,7 +5,6 @@ Django training project to show current weather in the city.
 
 Create `config.py` that looks like this:
 ```python
-# -*- coding: utf-8 -*-
 WEATHER_API_KEY = 'your_api_key'
 ```
 
